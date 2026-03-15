@@ -52,3 +52,7 @@ Below are the key parts of the fixed game UI:
 ![Enhanced Game UI](challenge4_screenshot.png)
 
 *(Screenshot of the new player experience with colored hints and summary table)*
+
+![Additional Enhanced UI](challenge4_2.png)
+
+*(Additional screenshot showing the game summary table)*
