@@ -103,7 +103,12 @@ if submit:
         outcome, message = check_guess(guess_int, secret)
 
         if show_hint:
-            st.warning(message)
+            if outcome == "Too High":
+                st.error(f"🔥 {message}")  # Red for too high
+            elif outcome == "Too Low":
+                st.info(f"❄️ {message}")  # Blue for too low
+            else:
+                st.success(message)  # Green for win
 
         st.session_state.score = update_score(
             current_score=st.session_state.score,
@@ -115,17 +120,31 @@ if submit:
             st.balloons()
             st.session_state.status = "won"
             st.success(
-                f"You won! The secret was {st.session_state.secret}. "
+                f"🎉 You won! The secret was {st.session_state.secret}. "
                 f"Final score: {st.session_state.score}"
             )
         else:
             if st.session_state.attempts >= attempt_limit:
                 st.session_state.status = "lost"
                 st.error(
-                    f"Out of attempts! "
+                    f"💥 Out of attempts! "
                     f"The secret was {st.session_state.secret}. "
                     f"Score: {st.session_state.score}"
                 )
+
+# Show game summary table
+if st.session_state.status in ["won", "lost"]:
+    st.subheader("📊 Game Summary")
+    history_data = []
+    for i, guess in enumerate(st.session_state.history, 1):
+        if i <= len(st.session_state.history):
+            outcome = "Win" if guess == st.session_state.secret else ("Too High" if guess > st.session_state.secret else "Too Low")
+            history_data.append({
+                "Attempt": i,
+                "Guess": guess,
+                "Result": outcome
+            })
+    st.table(history_data)
 
 st.divider()
 st.caption("Built by an AI that claims this code is production-ready.")

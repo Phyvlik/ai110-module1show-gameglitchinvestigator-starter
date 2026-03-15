@@ -47,4 +47,8 @@ Below are the key parts of the fixed game UI:
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- ✅ **Challenge 4 Completed**: Enhanced Game UI with color-coded hints (🔥 red for too high, ❄️ blue for too low), emojis, and a summary table showing attempt history.
+
+![Enhanced Game UI](challenge4_screenshot.png)
+
+*(Screenshot of the new player experience with colored hints and summary table)*
