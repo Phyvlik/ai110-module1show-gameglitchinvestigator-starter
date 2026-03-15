@@ -43,16 +43,10 @@ Below are the key parts of the fixed game UI:
 - The secret number stays stable across button clicks.
 - The attempt counter correctly starts at the selected limit and decrements each guess.
 
-> Take a screenshot of your terminal showing `3 passed` from `python -m pytest` (using Snipping Tool, Print Screen, etc.), save it into this project folder as `pytest_screenshot.png`, then re-open this README to confirm the image renders. If you don’t want to add an image file, you can leave the placeholder in place.
-
 ## 🚀 Stretch Features
 
 - ✅ **Challenge 4 Completed**: Enhanced Game UI with color-coded hints (🔥 red for too high, ❄️ blue for too low), emojis, and a summary table showing attempt history.
 
 ![Enhanced Game UI](challenge4_screenshot.png)
 
-*(Screenshot of the new player experience with colored hints and summary table)*
-
 ![Additional Enhanced UI](challenge4_2.png)
-
-*(Additional screenshot showing the game summary table)*
