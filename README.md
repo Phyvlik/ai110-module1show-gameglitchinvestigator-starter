@@ -35,8 +35,6 @@ All tests pass after fixing the logic bugs:
 
 ![Pytest Results](pytest_screenshot.png)
 
-*(Replace with your actual screenshot showing `3 passed` from running `python -m pytest`)*
-
 ## 📸 Demo
 
 Below are the key parts of the fixed game UI:
@@ -45,7 +43,7 @@ Below are the key parts of the fixed game UI:
 - The secret number stays stable across button clicks.
 - The attempt counter correctly starts at the selected limit and decrements each guess.
 
-> (Screenshot examples were captured during testing; use your platform’s snipping tool to add them here if you want a visual record.)
+> Take a screenshot of your terminal showing `3 passed` from `python -m pytest` (using Snipping Tool, Print Screen, etc.), save it into this project folder as `pytest_screenshot.png`, then re-open this README to confirm the image renders. If you don’t want to add an image file, you can leave the placeholder in place.
 
 ## 🚀 Stretch Features
 
