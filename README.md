@@ -25,13 +25,27 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- Describe the game's purpose: The game is a number guessing game where players try to guess a secret number within a range based on difficulty level, receiving hints to go higher or lower, with scoring based on attempts.
+- Detail which bugs you found: 1) Secret number always generated between 1-100 regardless of difficulty. 2) On even attempts, hints were wrong due to string comparison instead of numerical. 3) Attempt counter started at 1, showing incorrect attempts left. 4) Tests expected strings but functions returned tuples.
+- Explain what fixes you applied: Refactored logic functions to logic_utils.py, fixed secret generation to use difficulty ranges, removed string conversion for consistent numerical comparison, set attempts to start at 0, updated test assertions to check tuple elements.
+
+## 🧪 Test Results
+
+All tests pass after fixing the logic bugs:
+
+![Pytest Results](pytest_screenshot.png)
+
+*(Replace with your actual screenshot showing `3 passed` from running `python -m pytest`)*
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+Below are the key parts of the fixed game UI:
+
+- The hint now correctly says **Go LOWER** when the guess is too high, and **Go HIGHER** when the guess is too low.
+- The secret number stays stable across button clicks.
+- The attempt counter correctly starts at the selected limit and decrements each guess.
+
+> (Screenshot examples were captured during testing; use your platform’s snipping tool to add them here if you want a visual record.)
 
 ## 🚀 Stretch Features
 

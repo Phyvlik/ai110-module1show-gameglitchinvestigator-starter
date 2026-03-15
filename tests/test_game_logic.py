@@ -6,11 +6,11 @@ def test_winning_guess():
     assert result[0] == "Win"
 
 def test_guess_too_high():
-    # If secret is 50 and guess is 60, hint should be "Too High"
+    # If secret is 50 and guess is 60, outcome should be "Too High" and the hint should say to lower the guess
     result = check_guess(60, 50)
-    assert result[0] == "Too High"
+    assert result == ("Too High", "📉 Go LOWER!")
 
 def test_guess_too_low():
-    # If secret is 50 and guess is 40, hint should be "Too Low"
+    # If secret is 50 and guess is 40, outcome should be "Too Low" and the hint should say to raise the guess
     result = check_guess(40, 50)
-    assert result[0] == "Too Low"
+    assert result == ("Too Low", "📈 Go HIGHER!")

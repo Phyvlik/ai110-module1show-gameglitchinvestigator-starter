@@ -43,9 +43,11 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     if guess > secret:
-        return "Too High", "📈 Go HIGHER!"
+        # Too high should tell the player to lower their guess
+        return "Too High", "📉 Go LOWER!"
     else:
-        return "Too Low", "📉 Go LOWER!"
+        # Too low should tell the player to raise their guess
+        return "Too Low", "📈 Go HIGHER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
